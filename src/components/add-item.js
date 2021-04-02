@@ -21,7 +21,7 @@ export class AddNewItem extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.handleAddItem(this.state.formData)
+    this.props.handleAddItem(this.state.formData);
   }
 
   render() {
