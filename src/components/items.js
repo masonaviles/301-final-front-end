@@ -16,7 +16,7 @@ class Items extends React.Component {
           this.props.itemsList.map( (item,idx) =>
 
             <Card key={idx} style={{ width: '18rem' }} className="m-2">
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src="http://placekitten.com/100/180" />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>
