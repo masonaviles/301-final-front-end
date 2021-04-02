@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Form from './components/add-item.js';
 import Items from './components/items.js';
+import { Container, Navbar } from 'react-bootstrap';
 
 const API_SERVER = process.env.REACT_APP_API;
 
@@ -43,13 +44,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Our Items</h1>
+      <>
+      <Navbar bg="light">
+        <Container>
+          <Navbar.Brand href="#">Our Items</Navbar.Brand>
+        </Container>
+      </Navbar>
+      <Container className="mt-4 mb-4">
         <Form handleAddItem={this.addItem} />
         <hr />
         {/* pass updateItem as props */}
         <Items handleDelete={this.deleteItem} itemsList={this.state.items} handleUpdate={this.updateItem}/>
-      </div>
+      </Container>
+      </>
     );
   }
 }
