@@ -9,8 +9,9 @@ class Items extends React.Component {
     return (
       <section>
         <h2>Items...</h2>
+        {/* change .forEach to .map */}
         {
-          this.props.itemsList.forEach( (item,idx) =>
+          this.props.itemsList.map( (item,idx) =>
             <div key={idx}>
               <h3>{item.name}</h3>
               <p>{item.description}</p>

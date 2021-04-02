@@ -47,7 +47,8 @@ class App extends React.Component {
         <h1>Our Items</h1>
         <Form handleAddItem={this.addItem} />
         <hr />
-        <Items handleDelete={this.deleteItem} itemsList={this.state.items} />
+        {/* pass updateItem as props */}
+        <Items handleDelete={this.deleteItem} itemsList={this.state.items} handleUpdate={this.updateItem}/>
       </div>
     );
   }
